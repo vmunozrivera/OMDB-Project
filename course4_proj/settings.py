@@ -56,6 +56,7 @@ class Dev(Configuration):
         'django.contrib.staticfiles',
         # In House
         'movies',
+        'gh',
     ]
 
     MIDDLEWARE = [
@@ -73,7 +74,7 @@ class Dev(Configuration):
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [],
+            'DIRS': ['template'],
             'APP_DIRS': True,
             'OPTIONS': {
                 'context_processors': [
