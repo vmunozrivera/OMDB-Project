@@ -177,3 +177,7 @@ class Dev(Configuration):
     # Celery
     CELERY_RESULT_BACKEND = "django-db"
     CELERY_BROKER_URL = "redis://localhost:6379/0"
+
+    # Django Signals
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    ADMINS = [("Ben", "ben@example.com")]
