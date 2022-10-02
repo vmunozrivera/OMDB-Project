@@ -57,6 +57,8 @@ class Dev(Configuration):
         # In House
         'movies',
         'gh',
+        # Third Party
+        'django_celery_results',
     ]
 
     MIDDLEWARE = [
@@ -171,3 +173,7 @@ class Dev(Configuration):
 
     # OMDb
     OMDB_KEY = "1acf073e"
+
+    # Celery
+    CELERY_RESULT_BACKEND = "django-db"
+    CELERY_BROKER_URL = "redis://localhost:6379/0"
